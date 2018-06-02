@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
   <title>NY times article</title>
 </head>
+
 <body>
 
-  <div id="container">
-    <form action="">
-      <input type="text" name="Search Term" id="search">
-      <input type="text" name="" id="records">Number of Records</form>
-      <input type="text" name="" id="date">Start Dates</form>
-      <input type="text" name="" id="endDate">End Date</form>
+<div class="container">
+
+  <!-- jumbotron -->
+  <div class="jumbotron text-center">
+    <h1>New York Times Search</h1>
   </div>
-  
+
+<!-- search perameters card -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          Search Parameters
+        </div>
+        <!-- Forms -->
+        <form role="form">
+          <div class="form-group">
+            <label for="search">Search:</label>
+            <input type="text" class="form-control" id="search">
+          </div>
+          <div class="form-group">
+            <label for="number">Number of Records:</label>
+            <select class="form-control" id="sel1">
+              <option value="1">1</option>
+              <option value="5" selected>5</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="startYear">Start Year :</label>
+            <input type="text" class="form-control" id="startYear">
+          </div>
+          <div class="form-group">
+              <label for="endYear">End Year :</label>
+              <input type="text" class="form-control" id="endYear">
+            </div>
+            <button type="button" class="btn btn-outline-secondary">Search</button>
+            <button type="button" class="btn btn-outline-secondary">Clear</button>
+      </form>
+    </div>
+    </div>
+  </div>
+ 
+  <!-- search results card -->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-header">
+          Search Results
+        </div>
+        <div class="card-body bg-light">
+          <h3>Title</h3>
+          <h4>Author</h4>
+          <h6>Section</h4>
+          <h6>Date</h6>
+          <h6>Link</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
 </body>
 <script src="script.js"></script>
+
 </html>
